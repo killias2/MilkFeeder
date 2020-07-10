@@ -3,6 +3,7 @@ package com.TeK.model.sql;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 
 import com.TeK.model.Baby;
@@ -10,6 +11,7 @@ import com.TeK.model.BabyDAO;
 
 public class BabyDAOSql implements BabyDAO {
 	
+	private JdbcTemplate jdbcTemplate;
 	
 
 	@Override
