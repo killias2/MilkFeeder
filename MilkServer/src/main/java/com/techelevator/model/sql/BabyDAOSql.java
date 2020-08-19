@@ -5,15 +5,19 @@ import java.util.List;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
+import org.springframework.stereotype.Service;
 
 import com.techelevator.model.Baby;
 import com.techelevator.model.BabyDAO;
 
-
+@Service
 public class BabyDAOSql implements BabyDAO {
 	
 	private JdbcTemplate jdbcTemplate;
 	
+	public BabyDAOSql(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
 
 	@Override
 	public Baby getBabyById(int babyId) {
